@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import product1 from "/Images/placeholder.png";
-import product2 from "/Images/Product/product2.png";
-import product3 from "/Images/Product/product3.png";
-import product4 from "/Images/Product/product4.png";
-import product5 from "/Images/Product/product5.png";
-import product6 from "/Images/Product/product6.png";
+import product1 from "/Images/Product/placeholder.png";
 import { IoMdStarOutline, IoMdStar } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
