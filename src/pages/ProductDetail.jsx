@@ -1,5 +1,6 @@
 import React from 'react'
 
+console.log("hasdflaksdf")
 const ProductDetail = () => {
   return (
     <div>
