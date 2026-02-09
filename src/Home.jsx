@@ -7,9 +7,8 @@ import FeatureProducts from './components/FeatureProducts'
 
 
 const Home = () => {
-  return (
-    <>
-    <div>  
+  return ( <>
+    <div>
       <Container>
         <Banner/>
         <Category/>
