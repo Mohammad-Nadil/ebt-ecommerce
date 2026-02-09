@@ -5,10 +5,11 @@ import Category from './components/Category'
 import FlashDeals from './components/FlashDeals'
 import FeatureProducts from './components/FeatureProducts'
 
+
 const Home = () => {
   return (
     <>
-    <div>
+    <div>  
       <Container>
         <Banner/>
         <Category/>
@@ -17,7 +18,6 @@ const Home = () => {
       </Container>
     </div>
     </>
-
   )
 }
 
