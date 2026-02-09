@@ -79,7 +79,7 @@ const Footer = () => {
           <Container>
             <div className="sm:flex pt-15 pb-15.5">
               <div className="w-98.5 md:mr-10 lg:mr-24.25">
-                <img src={logo} alt="footer-image" className="mb-[35.78px]" />
+                <a href="/"><img src={logo} href="/" alt="footer-image" className="mb-[35.78px] cursor-pointer" /></a>
                 <p className="pb-6.5 font-lato font-regular text-[18px] text-[rgba(51,51,51,0.8)] tracking-[0%] leading-7">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
