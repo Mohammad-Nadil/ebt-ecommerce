@@ -21,7 +21,7 @@ import {
 const Category = () => {
   const categories = [
     {
-      icon: <Home className="w-5 h-5"  />,
+      icon: <Home className="w-5 h-5" />,
       label: 'Health & Household',
     },
     {
