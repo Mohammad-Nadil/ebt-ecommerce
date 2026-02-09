@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Router, Routes } from "react-router";
 import Product from "./pages/Product.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import Home from "./Home.jsx";
-console.log("asdfasdf");
+import Footer from "./components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,6 +15,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/product" element={<Product />} />
         <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   </StrictMode>,
 );
