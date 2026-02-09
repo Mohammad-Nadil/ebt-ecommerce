@@ -15,7 +15,7 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
-
+  // console.log()
   return (
     <footer className="bg-[#FFFFFF]">
       <section className=" footer-top border-b border-[#E5E5E5]">
@@ -77,7 +77,7 @@ const Footer = () => {
       <section className="footer-bottom ">
         <div className="border-b border-[#E5E5E5] ">
           <Container>
-            <div className="sm:flex pt-15 pb-15.5">
+            <div className="  md:flex md:flex-wrap lg:flex-nowrap pt-15 pb-15.5">
               <div className="w-98.5 md:mr-10 lg:mr-24.25">
                 <a href="/"><img src={logo} href="/" alt="footer-image" className="mb-[35.78px] cursor-pointer" /></a>
                 <p className="pb-6.5 font-lato font-regular text-[18px] text-[rgba(51,51,51,0.8)] tracking-[0%] leading-7">
