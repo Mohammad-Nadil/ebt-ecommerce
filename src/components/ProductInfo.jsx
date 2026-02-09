@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "./Container";
 import { IoMdStar } from "react-icons/io";
 import { FaCheck, FaCheckCircle, FaHeart } from "react-icons/fa";
+import img from "../../public/Images/Product/placeholder.png"
 
 const ProductInfo = () => {
   const [size, setSize] = useState("S");
@@ -13,7 +14,21 @@ const ProductInfo = () => {
   return (
     <div>
       <Container className="flex gap-24 py-6">
-        <div className="product_images w-1/2 border "></div>
+        <div className="product_images w-1/2 border ">
+        <div className="product_gallery flex gap-x-6">
+          <div className="w-6/6 border aspect-square">
+          <img className="h-full w-full object-contain" src={img} alt="" /></div>
+          <div className="w-1/6 border h-full">
+          <button className="w-full aspect-video border"></button>
+          <div className="w-full aspect-square"><img src={img} alt="" /></div>
+          <div className="w-full aspect-square"><img src={img} alt="" /></div>
+          <div className="w-full aspect-square"><img src={img} alt="" /></div>
+          <div className="w-full aspect-square"><img src={img} alt="" /></div>
+          <button className="w-full aspect-video border"></button>
+          </div>
+        </div>
+        <div className="product_social"></div>
+        </div>
         <div className="product_info w-1/2  flex flex-col gap-8">
           <div className="top flex flex-col gap-2 ">
             <p className="text-2xl font-medium font-poppins">
