@@ -15,12 +15,13 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
+  console.log("asdfasdf")
   return (
     <footer className="bg-[#FFFFFF]">
       <section className=" footer-top border-b border-[#E5E5E5]">
-        <div className=" pl-5 md:pl-3 lg:pl-0 sm:flex w-325.75 mx-auto pt-13.25 pb-12.25 ">
-          <div className="sm:w-1/4">
-            <div className="flex gap-3 md:gap-2 lg:gap-4.5 items-center">
+        <div className=" pl-5 sm:pl-8 flex-col gap-6 md:gap-2 lg:justify-between 2xl:gap-[99px] md:mx-auto md:pl-3 lg:pl-0 flex lg:flex-row w-325.75 mx-auto pt-13.25 pb-12.25 ">
+          <div className="">
+            <div className="flex gap-4 sm:gap-8 md:gap-2 lg:gap-4.5 items-center">
               <FaTruck className="text-6xl text-primary" />
               <div>
                 <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
@@ -32,8 +33,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="sm:w-1/4">
-            <div className="flex gap-3 md:gap-2 lg:gap-4.5  items-center">
+          <div className="">
+            <div className="flex gap-3.5 sm:gap-8  md:gap-2 lg:gap-4.5  items-center">
               <FaStar className="text-6xl text-primary" />
               <div>
                 <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
@@ -45,8 +46,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="sm:w-1/4">
-            <div className="flex gap-3 md:gap-2 lg:gap-4.5  items-center">
+          <div className="">
+            <div className="flex gap-3.5 sm:gap-8  md:gap-2 lg:gap-4.5  items-center">
               <FaClockRotateLeft className="text-6xl text-primary" />
               <div>
                 <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
@@ -58,8 +59,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="sm:w-1/4">
-            <div className="flex gap-3 md:gap-2 lg:gap-4.5  items-center">
+          <div className="">
+            <div className="flex gap-3.5 sm:gap-8  md:gap-2 lg:gap-4.5  items-center">
               <FaCreditCard className="text-6xl text-primary" />
               <div>
                 <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">

@@ -161,11 +161,10 @@ const Product = () => {
                 <li key={index}>
                   <a
                     href={category.href}
-                    className={`block font-poppins ${
-                      category.active
-                        ? "text-[#0198E9] font-medium"
-                        : "text-gray-600 hover:text-[#0198E9]"
-                    } transition-colors`}
+                    className={`block font-poppins ${category.active
+                      ? "text-[#0198E9] font-medium"
+                      : "text-gray-600 hover:text-[#0198E9]"
+                      } transition-colors`}
                   >
                     {index === 0 && "• "}
                     {category.name}
@@ -249,11 +248,10 @@ const Product = () => {
                         className="sr-only"
                       />
                       <div
-                        className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
-                          selectedRating === rating
-                            ? "bg-[#0198E9] border-[#0198E9]"
-                            : "bg-white border-gray-300"
-                        }`}
+                        className={`w-5 h-5 rounded border-2 flex items-center justify-center ${selectedRating === rating
+                          ? "bg-[#0198E9] border-[#0198E9]"
+                          : "bg-white border-gray-300"
+                          }`}
                       >
                         {selectedRating === rating && (
                           <IoMdCheckmark className="text-white text-sm" />
