@@ -115,7 +115,7 @@ const Product = () => {
     },
   ];
 
-  // 🔥 Pagination Calculations (Products Array er PORE)
+  //Pagination Calculations (Products Array er PORE)
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(
@@ -165,7 +165,7 @@ const Product = () => {
     );
   };
 
-  // Product card stars - 4 Orange + 1 Gray
+  // Product card stars - 4 Orange + 1 Gray star
   const renderProductStars = () => {
     return (
       <>
@@ -329,8 +329,8 @@ const Product = () => {
               <select className="border rounded px-3 py-2 text-sm font-poppins focus:outline-none focus:ring-2 focus:ring-[#0198E9]">
                 <option>Newest Items</option>
                 <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Best Rating</option>
+                <option>Price: High to Lows</option>
+                <option>Best Ratings</option>
               </select>
             </div>
           </div>
