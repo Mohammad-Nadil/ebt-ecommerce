@@ -16,6 +16,7 @@ const Home = () => {
         <FeatureProducts/>
       </Container>
     </div>
+   
     </>
 
   )
