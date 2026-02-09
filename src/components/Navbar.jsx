@@ -20,9 +20,9 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="I'm looking for..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none "
+                className="w-full text-[16px] font-poppins px-4 py-[13px] bg-[#F6F6F6] border-none border-gray-300 rounded-r-lg outline-none   "
               />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-1 rounded">
+              <button className="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-[17px] rounded-lg ">
                 <FiSearch />
               </button>
             </div>
@@ -32,32 +32,32 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <button className="flex items-center gap-2 hover:text-blue-500">
               <FiUser size={20} />
-              <span>Login</span>
+              <span className='text-[16px] font-poppins leading-[120%] text-[#29292E]'>Login</span>
             </button>
             <button className="flex items-center gap-2 hover:text-blue-500">
               <FiHeart size={20} />
-              <span>Wishlist</span>
+              <span className='text-[16px] font-poppins leading-[120%] text-[#29292E]'>Wishlist</span>
             </button>
             <button className="flex items-center gap-2 hover:text-blue-500 relative">
               <FiShoppingCart size={20} />
-              <span>My cart</span>
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                0
+              <span className='text-[16px] font-poppins leading-[120%] text-[#29292E]'>My cart</span>
+              <span className="absolute top-1/2 left-full bg-red-500 translate-x-2 -translate-y-1/2 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                1
               </span>
             </button>
           </div>
         </div>
 
        
-        <div className="border-t border-gray-200">
+        <div>
           <ul className="flex items-center justify-center gap-8 py-3 text-sm font-medium">
-            <li className="hover:text-blue-500 cursor-pointer">WOMEN'S FASHION</li>
-            <li className="hover:text-blue-500 cursor-pointer">MEN'S FASHION</li>
-            <li className="hover:text-blue-500 cursor-pointer">KID'S FASHION</li>
-            <li className="hover:text-blue-500 cursor-pointer">HOME & LIFESTYLE</li>
-            <li className="hover:text-blue-500 cursor-pointer">ARTS & CRAFTS</li>
-            <li className="hover:text-blue-500 cursor-pointer">COMPUTER & ELECTRONICS</li>
-            <li className="hover:text-blue-500 cursor-pointer">FOOD & GROCERY</li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="WOMEN'S FASHION">WOMEN'S FASHION</a></li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="MEN'S FASHION">MEN'S FASHION</a></li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="KID'S FASHION">KID'S FASHION</a></li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="HOME & LIFESTYLE">HOME & LIFESTYLE</a></li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="ARTS & CRAFTS">ARTS & CRAFTS</a></li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="COMPUTER & ELECTRONICS">COMPUTER & ELECTRONICS</a></li>
+            <li className="hover:text-blue-500 cursor-pointer text-16px font-poppins text-[#333333]"><a href="FOOD & GROCERY">FOOD & GROCERY</a></li>
           </ul>
         </div>
       </Container>
