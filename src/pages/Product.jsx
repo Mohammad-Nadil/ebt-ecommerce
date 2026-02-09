@@ -14,6 +14,10 @@ const Product = () => {
   const [isPriceOpen, setIsPriceOpen] = useState(true);
   const [isRatingOpen, setIsRatingOpen] = useState(true);
 
+  // Pagination States
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 8;
+
   // Categories data
   const categories = [
     { name: "Men's Fashion", href: "#" },
@@ -110,6 +114,35 @@ const Product = () => {
       rating: 0,
     },
   ];
+
+  // 🔥 Pagination Calculations (Products Array er PORE)
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct,
+  );
+  const totalPages = Math.ceil(products.length / productsPerPage);
+
+  // Page Change Handlers
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   // Rating options
   const ratingOptions = [1, 2, 3, 4, 5];
@@ -280,8 +313,14 @@ const Product = () => {
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
             <p className="text-gray-600 font-poppins">
-              Showing <span className="font-semibold">20</span> of{" "}
-              <span className="font-semibold">160</span> products
+              Showing{" "}
+              <span className="font-semibold">{indexOfFirstProduct + 1}</span>{" "}
+              to{" "}
+              <span className="font-semibold">
+                {Math.min(indexOfLastProduct, products.length)}
+              </span>{" "}
+              of <span className="font-semibold">{products.length}</span>{" "}
+              products
             </p>
             <div className="flex items-center gap-2">
               <span className="text-gray-600 font-poppins">Sort by:</span>
@@ -296,7 +335,7 @@ const Product = () => {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
+            {currentProducts.map((product) => (
               <div
                 key={product.id}
                 className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden group"
@@ -345,19 +384,41 @@ const Product = () => {
 
           {/* Pagination */}
           <div className="flex justify-center gap-2 mt-8">
-            <button className="px-4 py-2 border rounded font-poppins hover:bg-gray-50 cursor-pointer">
+            <button
+              onClick={handlePrevious}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 border rounded font-poppins transition-colors ${
+                currentPage === 1
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-gray-50 cursor-pointer"
+              }`}
+            >
               Previous
             </button>
-            <button className="px-4 py-2 bg-[#0198E9] text-white rounded font-poppins cursor-pointer">
-              1
-            </button>
-            <button className="px-4 py-2 border rounded font-poppins hover:bg-gray-50 cursor-pointer">
-              2
-            </button>
-            <button className="px-4 py-2 border rounded font-poppins hover:bg-gray-50 cursor-pointer">
-              3
-            </button>
-            <button className="px-4 py-2 border rounded font-poppins hover:bg-gray-50 cursor-pointer">
+
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => handlePageChange(i + 1)}
+                className={`px-4 py-2 rounded font-poppins cursor-pointer ${
+                  currentPage === i + 1
+                    ? "bg-[#0198E9] text-white"
+                    : "border hover:bg-gray-50"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            <button
+              onClick={handleNext}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 border rounded font-poppins transition-colors ${
+                currentPage === totalPages
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-gray-50 cursor-pointer"
+              }`}
+            >
               Next
             </button>
           </div>
