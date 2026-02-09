@@ -15,7 +15,7 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
-
+  // console.log()
   return (
     <footer className="bg-[#FFFFFF]">
       <section className=" footer-top border-b border-[#E5E5E5]">
