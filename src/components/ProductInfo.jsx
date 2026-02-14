@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "./Container";
 import { IoMdStar } from "react-icons/io";
 import { FaCheck, FaCheckCircle, FaHeart } from "react-icons/fa";
-import img from "../../public/Images/Product/placeholder.png"
+import img from "/Images/Product/placeholder.png"
 
 const ProductInfo = () => {
   const [size, setSize] = useState("S");
