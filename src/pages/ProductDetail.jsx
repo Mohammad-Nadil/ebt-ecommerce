@@ -3,7 +3,6 @@ import Container from "../components/Container";
 import ProductInfo from "../components/ProductInfo";
 import ProductDescription from "../components/ProductDescription";
 import ProductReview from "../components/ProductReview";
-import ProductCard from "../components/ProductCard";
 
 const ProductDetail = () => {
   return (

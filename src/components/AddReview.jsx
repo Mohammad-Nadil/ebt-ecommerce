@@ -5,7 +5,7 @@ const AddReview = () => {
   const [rating, setRating] = useState(4);
 
   return (
-    <div className="max-w-6xl mt-16 py-7 px-4 sm:px-6 lg:px-0">
+    <div className="max-w-6xl mt-16 py-7 md:px-6 lg:px-0">
       <h2 className="text-xl font-semibold mb-2">
         Add Your Review
       </h2>

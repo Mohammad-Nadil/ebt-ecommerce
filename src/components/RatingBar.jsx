@@ -3,7 +3,7 @@ import Flex from "./Flex";
 
 const RatingBar = ({ stars, percent }) => {
   return (
-    <Flex className="flex-col sm:flex-row sm:items-center gap-2 sm:gap-x-4 w-full">
+    <Flex className="flex-col sm:flex-row sm:items-center  sm:gap-x-4 w-full">
       {/* star label */}
       <span className="text-sm w-full sm:w-[60px] shrink-0">
         {stars} Stars

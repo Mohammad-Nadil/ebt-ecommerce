@@ -105,7 +105,7 @@ const ProductInfo = () => {
             </div>
           </div>
           <div className="pricing flex flex-col gap-y-2.5">
-            <div className="price flex items-center gap-4 font-poppins">
+            <div className="price flex items-center justify-between sm:justify-start xs:gap-4 font-poppins">
               <p className="text-4xl  font-semibold text-primary pr-1.5">
                 $976.33
               </p>

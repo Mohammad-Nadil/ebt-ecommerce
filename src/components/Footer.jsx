@@ -18,170 +18,146 @@ const Footer = () => {
   // console.log()
   return (
     <footer className="bg-[#FFFFFF]">
-      <section className=" footer-top border-b border-[#E5E5E5]">
-        <div className=" pl-5 sm:pl-8 flex-col gap-6 md:gap-2 lg:justify-between 2xl:gap-[99px] md:mx-auto md:pl-3 lg:pl-0 flex lg:flex-row w-325.75 mx-auto pt-13.25 pb-12.25 ">
-          <div className="">
-            <div className="flex gap-4 sm:gap-8 md:gap-2 lg:gap-4.5 items-center">
-              <FaTruck className="text-6xl text-primary" />
+      <section className="border-b border-[#E5E5E5]">
+        <Container>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-10">
+            <div className="flex items-center gap-4">
+              <FaTruck className="text-4xl text-primary shrink-0" />
               <div>
-                <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
+                <h4 className="font-poppins font-medium text-lg text-[#333]">
                   FREE SHIPPING
                 </h4>
-                <p className="pb-[1.89px] font-poppins font-regular text-[16px] text-[#757575] tracking-[0%]">
-                  Order via Campaign{" "}
-                </p>
+                <p className="text-sm text-[#757575]">Order via Campaign</p>
               </div>
             </div>
-          </div>
-          <div className="">
-            <div className="flex gap-3.5 sm:gap-8  md:gap-2 lg:gap-4.5  items-center">
-              <FaStar className="text-6xl text-primary" />
+
+            <div className="flex items-center gap-4">
+              <FaStar className="text-4xl text-primary shrink-0" />
               <div>
-                <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
+                <h4 className="font-poppins font-medium text-lg text-[#333]">
                   BEST PRICE
                 </h4>
-                <p className="pb-[1.89px] font-poppins font-regular text-[16px] text-[#757575] tracking-[0%]">
-                  Quality products
-                </p>
+                <p className="text-sm text-[#757575]">Quality products</p>
               </div>
             </div>
-          </div>
-          <div className="">
-            <div className="flex gap-3.5 sm:gap-8  md:gap-2 lg:gap-4.5  items-center">
-              <FaClockRotateLeft className="text-6xl text-primary" />
+
+            <div className="flex items-center gap-4">
+              <FaClockRotateLeft className="text-4xl text-primary shrink-0" />
               <div>
-                <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
+                <h4 className="font-poppins font-medium text-lg text-[#333]">
                   FREE RETURN
                 </h4>
-                <p className="pb-[1.89px] font-poppins font-regular text-[16px] text-[#757575] tracking-[0%]">
-                  Within 7 days returns
-                </p>
+                <p className="text-sm text-[#757575]">Within 7 days returns</p>
               </div>
             </div>
-          </div>
-          <div className="">
-            <div className="flex gap-3.5 sm:gap-8  md:gap-2 lg:gap-4.5  items-center">
-              <FaCreditCard className="text-6xl text-primary" />
+
+            <div className="flex items-center gap-4">
+              <FaCreditCard className="text-4xl text-primary shrink-0" />
               <div>
-                <h4 className="pb-[1.89px] font-poppins font-medium text-[20px] text-[#333333] tracking-[0%]">
+                <h4 className="font-poppins font-medium text-lg text-[#333]">
                   SECURE PAYMENT
                 </h4>
-                <p className="pb-[1.89px] font-poppins font-regular text-[16px] text-[#757575] tracking-[0%]">
-                  100% secure payment
+                <p className="text-sm text-[#757575]">100% secure payment</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-[#E5E5E5]">
+        <Container>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-12">
+            {/* Logo + About */}
+            <div>
+              <img src={logo} alt="logo" className="mb-6" />
+              <p className="text-sm text-[#555] leading-6 mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+
+              <div className="flex items-center gap-4 text-2xl text-primary">
+                <FaFacebook />
+                <AiFillTwitterCircle />
+                <FaLinkedinIn />
+                <FaInstagram />
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-poppins font-medium text-lg mb-5">
+                QUICK LINKS
+              </h3>
+              <ul className="space-y-3 text-sm text-[#555]">
+                <li>
+                  <a href="#">About us</a>
+                </li>
+                <li>
+                  <a href="#">Contact us</a>
+                </li>
+                <li>
+                  <a href="#">Products</a>
+                </li>
+                <li>
+                  <a href="#">Login</a>
+                </li>
+                <li>
+                  <a href="#">Sign Up</a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Customer Area */}
+            <div>
+              <h3 className="font-poppins font-medium text-lg mb-5">
+                CUSTOMER AREA
+              </h3>
+              <ul className="space-y-3 text-sm text-[#555]">
+                <li>
+                  <a href="#">My Account</a>
+                </li>
+                <li>
+                  <a href="#">Orders</a>
+                </li>
+                <li>
+                  <a href="#">Terms</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Shipping Info</a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 className="font-poppins font-medium text-lg mb-5">CONTACT</h3>
+              <p className="text-sm text-[#555] mb-6">Have any question?</p>
+              <div className="flex items-center gap-4">
+                <FaHeadset className="text-3xl text-primary" />
+                <p className="text-xl font-semibold text-primary">
+                  099 456 789
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
-      <section className="footer-bottom ">
-        <div className="border-b border-[#E5E5E5] ">
-          <Container>
-            <div className="  md:flex md:flex-wrap lg:flex-nowrap pt-15 pb-15.5">
-              <div className="w-98.5 md:mr-10 lg:mr-24.25">
-                <a href="/"><img src={logo} href="/" alt="footer-image" className="mb-[35.78px] cursor-pointer" /></a>
-                <p className="pb-6.5 font-lato font-regular text-[18px] text-[rgba(51,51,51,0.8)] tracking-[0%] leading-7">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <div className="flex  items-center gap-5 text-[40px]">
-                  <FaFacebook className="text-primary" />
-                  <AiFillTwitterCircle className="text-primary" />
-                  <div className="text-2xl w-10 aspect-square grid place-content-center rounded-full text-white bg-[#0077b5]">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="text-2xl w-10 aspect-square grid place-content-center rounded-full text-white bg-linear-to-tr from-[#FA8F21] to-[#D82D7E]">
-                    <FaInstagram />
-                  </div>
-                </div>
-              </div>
-              <div className="w-32 mr-35">
-                <h3 className="pb-6.25 w-32.5 font-poppins font-medium text-[20px] text-[#333333] tracking-[0%] ">
-                  QUICK LINKS
-                </h3>
-                <div className="f-menu">
-                  <ul>
-                    <li>
-                      <a href="" className="">
-                        About us
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">Contact us</a>
-                    </li>
-                    <li>
-                      <a href="">Products</a>
-                    </li>
-                    <li>
-                      <a href="">Login</a>
-                    </li>
-                    <li>
-                      <a href="">Sign Up</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="w-42 mr-35">
-                <h3 className="pb-6.25 w-43.5 font-poppins font-medium text-[20px] text-[#333333] tracking-[0%] ">
-                  CUSTOMER AREA
-                </h3>
-                <div className="f-menu">
-                  <ul>
-                    <li>
-                      <a href="" className="">
-                        My Account
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">Orders</a>
-                    </li>
-                    <li>
-                      <a href="">Terms</a>
-                    </li>
-                    <li>
-                      <a href="">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="">Shipping Information</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="w-85">
-                <h3 className="pb-6.25 w-43.5 font-poppins font-medium text-[20px] text-[#333333] tracking-[0%] ">
-                  CONTACT
-                </h3>
-                <p className="pb-7.75 font-poppins font-regular text-[16px] text-[rgba(51,51,51,0.8)] tracking-[0%] leading-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor{" "}
-                </p>
-                <div className="lg:flex gap-6.75 items-center">
-                  <FaHeadset className="text-5xl text-[#8d8d8d]" />
-                  <div>
-                    <p className=" pb-1.5 font-poppins font-normal  lg:text-[18px] leading-6 text-[#333333]">
-                      Have any question?
-                    </p>
-                    <p className=" pb-1.5 font-poppins font-semibold text-[28px] leading-6 text-[#0198E9]">
-                      099 456 789
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
+      <section className="border-t border-gray-200">
         <Container>
-          <div className="flex justify-between  items-center pt-5 pb-4.25">
-            <div>
-              <p className="font-poppins font-regular text-[16px]  text-[#757575]">
-                Projectnirvoya - © 2021 All Rights Reserved
-              </p>
-            </div>
-            <div className="flex items-center">
-              <p className="pr-0.75 text-[#0198E9] font-poppins text-[18px]">
-                Pay With
-              </p>
-              <img src={pay} alt="" />
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 py-4 text-sm text-gray-600">
+            <p className="text-center sm:text-left">
+              © {new Date().getFullYear()} Projectnirvoya. All Rights Reserved.
+            </p>
+
+            <div className="flex items-center gap-4">
+              <a href="#" className="hover:text-primary transition">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-primary transition">
+                Terms & Conditions
+              </a>
             </div>
           </div>
         </Container>

@@ -49,7 +49,7 @@ const ProductReview = () => {
   return (
     <Container className="px-4 sm:px-8 lg:px-12">
       {/* review top section */}
-      <Flex className="py-7 flex-col lg:flex-row gap-8 lg:gap-x-20">
+      <Flex className="py-7 flex-col items-start  gap-8 lg:gap-x-20">
         {/* average review */}
         <div className="leading-8">
           <h3 className="font-poppins font-medium text-lg sm:text-[20px]">
@@ -63,14 +63,11 @@ const ProductReview = () => {
               ))}
             </Flex>
 
-            <p className="font-poppins text-sm sm:text-[16px]">
-              4.6 out of 5
-            </p>
+            <p className="font-poppins text-sm sm:text-[16px]">4.6 out of 5</p>
           </Flex>
         </div>
-
         {/* rating breakdown */}
-        <div className="space-y-3 w-full lg:w-auto">
+        <div className="sm:space-y-3 w-full lg:w-auto">
           {ratingData.map((item) => (
             <RatingBar
               key={item.stars}
@@ -79,14 +76,13 @@ const ProductReview = () => {
             />
           ))}
         </div>
-
-        {/* write review button */}
-        <div className="flex items-center w-full lg:w-auto">
-          <button className="bg-blue-500 text-white w-full lg:w-auto px-6 sm:px-12 py-3 hover:bg-blue-600 transition">
-            <p className="font-poppins font-medium text-sm">
-              Write a Review
-            </p>
-          </button>
+        {/* write review button */}{" "}
+        <div className="btn">
+          <div className="flex items-center w-full lg:w-auto">
+            <button className="bg-blue-500 text-white w-full lg:w-auto px-6 sm:px-12 py-3 hover:bg-blue-600 transition">
+              <p className="font-poppins font-medium text-sm">Write a Review</p>
+            </button>
+          </div>
         </div>
       </Flex>
 
@@ -96,10 +92,7 @@ const ProductReview = () => {
         <p className="border-t mb-5"></p>
 
         {reviews.map((review, index) => (
-          <div
-            key={index}
-            className="flex flex-col sm:flex-row gap-4 mb-8"
-          >
+          <div key={index} className="flex flex-col sm:flex-row gap-4 mb-8">
             <img
               src={review.img}
               alt={review.name}
@@ -110,9 +103,7 @@ const ProductReview = () => {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                 <h4 className="font-medium">{review.name}</h4>
 
-                <span className="text-sm text-gray-400">
-                  {review.rating}.0
-                </span>
+                <span className="text-sm text-gray-400">{review.rating}.0</span>
 
                 <div className="flex text-starColor">
                   {[...Array(review.rating)].map((_, i) => (
@@ -120,9 +111,7 @@ const ProductReview = () => {
                   ))}
                 </div>
 
-                <span className="text-sm text-gray-400">
-                  {review.time}
-                </span>
+                <span className="text-sm text-gray-400">{review.time}</span>
               </div>
 
               <p className="text-gray-600 mt-2 text-sm leading-6">
