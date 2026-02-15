@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import Container from "./Container";
 import { IoMdStar } from "react-icons/io";
-import { FaCheck, FaCheckCircle, FaHeart } from "react-icons/fa";
-import img from "/Images/Product/placeholder.png"
+import {
+  FaAngleDown,
+  FaAngleUp,
+  FaCheck,
+  FaCheckCircle,
+  FaHeart,
+} from "react-icons/fa";
+import product1 from "/Images/download1.jpg";
+import product2 from "/Images/download2.jpg";
+import product3 from "/Images/download3.jpg";
+import product4 from "/Images/download4.jpg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ProductInfo = () => {
   const [size, setSize] = useState("S");
@@ -11,30 +21,64 @@ const ProductInfo = () => {
   const [quantity, setQuantity] = useState(1);
   const increase = () => setQuantity((q) => q + 1);
   const decrease = () => setQuantity((q) => (q > 1 ? q - 1 : 1));
+  let images = [product1, product2, product3, product4];
+  const [active, setActive] = useState(0);
   return (
     <div>
-      <Container className="flex gap-24 py-6">
-        <div className="product_images w-1/2 border ">
-        <div className="product_gallery flex gap-x-6">
-          <div className="w-6/6 border aspect-square">
-          <img className="h-full w-full object-contain" src={img} alt="" /></div>
-          <div className="w-1/6 border h-full">
-          <button className="w-full aspect-video border"></button>
-          <div className="w-full aspect-square"><img src={img} alt="" /></div>
-          <div className="w-full aspect-square"><img src={img} alt="" /></div>
-          <div className="w-full aspect-square"><img src={img} alt="" /></div>
-          <div className="w-full aspect-square"><img src={img} alt="" /></div>
-          <button className="w-full aspect-video border"></button>
+      <Container className="flex flex-col lg:flex-row gap-5 2xl:gap-24 py-6">
+        <div className="product_images lg:w-1/2  ">
+          <div className="product_gallery flex gap-x-6">
+            <div className="w-full aspect-square relative overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={active}
+                  src={images[active]}
+                  alt="product"
+                  className="h-full w-full object-contain absolute inset-0"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </AnimatePresence>
+            </div>
+
+            <div className="w-1/6 flex flex-col gap-y-3 h-full">
+              <button
+                onClick={() =>
+                  setActive((prev) =>
+                    prev === 0 ? images.length - 1 : prev - 1,
+                  )
+                }
+                className="w-full aspect-video grid place-content-center text-4xl hover:scale-150 hover:cursor-pointer duration-300"
+              >
+                <FaAngleUp />
+              </button>
+              {images.map((image, index) => (
+                <div
+                  onClick={() => setActive(index)}
+                  key={index}
+                  className={`w-full aspect-square overflow-hidden cursor-pointer transition duration-300  ${active === index ? "ring-2 ring-primary scale-105" : "hover:scale-110"}`}
+                >
+                  <img className="h-full w-full object-contain" src={image} alt="product" />
+                </div>
+              ))}
+              <button
+                onClick={() => setActive((prev) => (prev + 1) % images.length)}
+                className="w-full aspect-video grid place-content-center text-4xl hover:scale-150 hover:cursor-pointer duration-300 "
+              >
+                <FaAngleDown />
+              </button>
+            </div>
           </div>
+          <div className="product_social"></div>
         </div>
-        <div className="product_social"></div>
-        </div>
-        <div className="product_info w-1/2  flex flex-col gap-8">
+        <div className="product_info l:w-1/2  flex flex-col gap-8">
           <div className="top flex flex-col gap-2 ">
             <p className="text-2xl font-medium font-poppins">
               Super Skinny Rib Trouser & Joggers for Men By Sowdagar Trouser
             </p>
-            <div className="flex items-center gap-7">
+            <div className="flex flex-col sm:flex-row gap-2 sm:items-center sm:gap-7">
               <div className="rating flex items-center gap-1.5">
                 <p className="text-lg font-poppins font-medium">4.0</p>
                 <div className="flex gap-1 items-center text-[#ffb340] text-2xl">
@@ -109,7 +153,7 @@ const ProductInfo = () => {
               ))}
             </div>
           </div>
-          <div className="quantity_buttons flex items-center gap-x-9">
+          <div className="quantity_buttons flex flex-col xl:flex-row xl:items-center gap-y-3 gap-x-9">
             <div className="quantity flex items-center gap-x-2">
               <p className="text-lg font-medium font-poppins">Quantity :</p>
 
@@ -134,10 +178,10 @@ const ProductInfo = () => {
               </div>
             </div>
 
-            <button className="py-3 px-8 border border-primary text-primary text-xl font-medium hover:bg-primary hover:cursor-pointer hover:text-white duration-300 bg-primary/5 rounded-sm">
+            <button className="py-3 sm:max-w-3xs px-8 border border-primary text-primary text-xl font-medium hover:bg-primary hover:cursor-pointer hover:text-white duration-300 bg-primary/5 rounded-sm">
               Add to Cart
             </button>
-            <button className="py-3 px-8 border border-primary text-primary text-xl font-medium hover:bg-primary hover:cursor-pointer hover:text-white duration-300 bg-primary/5 rounded-sm">
+            <button className="py-3 sm:max-w-3xs px-8 border border-primary text-primary text-xl font-medium hover:bg-primary hover:cursor-pointer hover:text-white duration-300 bg-primary/5 rounded-sm">
               Buy Now
             </button>
           </div>

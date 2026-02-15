@@ -18,8 +18,6 @@ const ProductDetail = () => {
         <section className="product-review">
           <ProductReview />
         </section>
-
-        <ProductCard />
       </Container>
     </div>
   );

@@ -26,38 +26,38 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3
+          <div className="flex  items-center gap-3
            sm:gap-6 ">
             <button className="flex items-center gap-2 hover:text-blue-500">
               <FiUser size={20} />
-              <span className="text-[16px] font-poppins leading-[120%] text-[#29292E] hidden sm:block">
+              <NavLink className="text-[16px] font-poppins leading-[120%] text-[#29292E] hidden sm:block">
                 Login
-              </span>
+              </NavLink>
             </button>
             <button className="flex items-center gap-2 hover:text-blue-500">
               <FiHeart size={20} />
-              <span className="text-[16px] font-poppins leading-[120%] text-[#29292E] hidden sm:block">
+              <NavLink className="text-[16px] font-poppins leading-[120%] text-[#29292E] hidden sm:block">
                 Wishlist
-              </span>
+              </NavLink>
             </button>
             <button className="flex items-center gap-2 hover:text-blue-500 relative ">
               <FiShoppingCart size={20} />
-              <span className="text-[16px] font-poppins leading-[120%] text-[#29292E] hidden sm:block">
+              <NavLink className="text-[16px] font-poppins leading-[120%] text-[#29292E] hidden sm:block">
                 My cart{" "}
-              </span>
-              <span className="absolute top-0 right-full bg-red-500 translate-x-2 -translate-y-1/2 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+              </NavLink>
+              <NavLink className="absolute top-0 right-full bg-red-500 translate-x-2 -translate-y-1/2 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                 1
-              </span>
+              </NavLink>
             </button>
           </div>
         </div>
         <div className="w-full ">
-          <ul className="flex items-center xl:justify-center gap-8 py-3 text-sm font-medium w-full overflow-x-scroll overflow-y-clip xl:overflow-visible text-nowrap">
+          <ul className="flex items-center xl:justify-between gap-8 py-3 text-sm font-medium w-full overflow-x-scroll overflow-y-clip xl:overflow-visible text-nowrap relative">
             {/* WOMEN'S FASHION */}
-            <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+            <li className=" group">
+              <NavLink to="product" className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
                 WOMEN'S FASHION
-              </span>
+              </NavLink>
 
               <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
                 <div className="w-[1100px] bg-white shadow-lg border border-gray-200">
@@ -281,9 +281,9 @@ const Navbar = () => {
 
             {/* MEN'S FASHION */}
             <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+              <NavLink to={`/product`} className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
                 MEN'S FASHION
-              </span>
+              </NavLink>
 
               <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
                 <div className="w-[1100px] bg-white shadow-lg border border-gray-200">
@@ -507,12 +507,12 @@ const Navbar = () => {
 
             {/* KID'S FASHION */}
             <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+              <NavLink to="product" className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
                 KID'S FASHION
-              </span>
+              </NavLink>
 
               <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
-                <div className="w-[900px] bg-white shadow-lg border border-gray-200">
+                <div className="w-max bg-white shadow-lg border border-gray-200">
                   <div className="grid grid-cols-4 gap-10 p-8 text-sm text-[#555]">
                     <div>
                       <h4 className="font-semibold mb-3 text-[#29292E]">
@@ -582,12 +582,12 @@ const Navbar = () => {
 
             {/* HOME & LIFESTYLE */}
             <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+              <NavLink  to="product" className="hover:text-blue-500  cursor-pointer text-[16px] font-poppins text-[#333333]">
                 HOME & LIFESTYLE
-              </span>
+              </NavLink>
 
-              <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
-                <div className="w-[900px] bg-white shadow-lg border border-gray-200">
+              <div className="absolute left-0 top-full  z-50 hidden  xl:group-hover:block transition-all duration-300">
+                <div className="w-max bg-white shadow-lg border border-gray-200">
                   <div className="grid grid-cols-4 gap-10 p-8 text-sm text-[#555]">
                     <div>
                       <h4 className="font-semibold mb-3 text-[#29292E]">
@@ -651,12 +651,12 @@ const Navbar = () => {
 
             {/* ARTS & CRAFTS */}
             <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+              <NavLink to="product" className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
                 ARTS & CRAFTS
-              </span>
+              </NavLink>
 
               <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
-                <div className="w-[700px] bg-white shadow-lg border border-gray-200">
+                <div className="w-max bg-white shadow-lg border border-gray-200">
                   <div className="grid grid-cols-3 gap-10 p-8 text-sm text-[#555]">
                     <div>
                       <h4 className="font-semibold mb-3 text-[#29292E]">
@@ -707,13 +707,13 @@ const Navbar = () => {
 
             {/* COMPUTER & ELECTRONICS */}
             <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+              <NavLink  to="product" className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
                 COMPUTER & ELECTRONICS
-              </span>
+              </NavLink>
 
               <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
-                <div className="w-[700px] bg-white shadow-lg border border-gray-200">
-                  <div className="grid grid-cols-3 gap-10 p-8 text-sm text-[#555]">
+                <div className="w-max bg-white shadow-lg border border-gray-200">
+                  <div className="grid grid-cols-2 gap-10 p-8 text-sm text-[#555]">
                     <div>
                       <h4 className="font-semibold mb-3 text-[#29292E]">
                         Computers
@@ -753,12 +753,12 @@ const Navbar = () => {
 
             {/* FOOD & GROCERY */}
             <li className="relative group">
-              <span className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
+              <NavLink  to="product" className="hover:text-blue-500 cursor-pointer text-[16px] font-poppins text-[#333333]">
                 FOOD & GROCERY
-              </span>
+              </NavLink>
 
-              <div className="absolute left-0 top-full z-50 hidden xl:group-hover:block transition-all duration-300">
-                <div className="w-[500px] bg-white shadow-lg border border-gray-200">
+              <div className="absolute  top-full right-0 z-50 hidden xl:group-hover:block transition-all duration-300">
+                <div className="w-max bg-white shadow-lg border border-gray-200">
                   <div className="grid grid-cols-2 gap-10 p-8 text-sm text-[#555]">
                     <div>
                       <h4 className="font-semibold mb-3 text-[#29292E]">

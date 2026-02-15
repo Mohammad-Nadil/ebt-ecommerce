@@ -3,10 +3,12 @@ import placeholder from "/Images/Product/placeholder.png";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { FiShoppingCart } from "react-icons/fi";
+import { NavLink } from "react-router";
 const ProductCard = ({ id, name, price, image, star, off , className }) => {
   const [liked, setLiked] = useState(false);
   return (
-    <div
+    <NavLink
+      to={`/product/:id`}
       key={id || 1}
       className={`bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden group ${className || ""}`}
     >
@@ -54,7 +56,7 @@ const ProductCard = ({ id, name, price, image, star, off , className }) => {
           </button>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

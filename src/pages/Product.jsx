@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import product1 from "/Images/Product/placeholder.png";
 import { IoMdStarOutline, IoMdStar } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import { FiShoppingCart } from "react-icons/fi";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import ProductCard from "../components/ProductCard"
 
 const Product = () => {
   // States
@@ -336,49 +335,7 @@ const Product = () => {
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden group"
-              >
-                {/* Product Image */}
-                <div className="relative overflow-hidden bg-gray-50">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <button className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md hover:bg-[#0198E9] hover:text-white transition-colors ">
-                    <FaRegHeart />
-                  </button>
-                </div>
-
-                {/* Product Info */}
-                <div className="p-4">
-                  {/* Rating - 4 Orange + 1 Gray */}
-                  <div className="flex items-center gap-1 mb-2">
-                    {renderProductStars()}
-                    <span className="text-sm text-gray-500 ml-1 font-poppins">
-                      (0)
-                    </span>
-                  </div>
-
-                  {/* Product Name */}
-                  <h3 className="text-sm text-gray-700 mb-3 line-clamp-2 min-h-10 font-poppins">
-                    {product.name}
-                  </h3>
-
-                  {/* Price and Cart */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#0198E9] font-bold text-lg font-poppins flex items-center">
-                      <TbCurrencyTaka className="text-2xl" />
-                      {product.price}
-                    </span>
-                    <button className="bg-[#0198E9] text-white p-2 rounded-lg hover:bg-[#0177c1] transition-colors">
-                      <FiShoppingCart className="text-xl" />
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <ProductCard key={product.id} />
             ))}
           </div>
 
