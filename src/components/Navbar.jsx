@@ -2,15 +2,16 @@ import React from "react";
 import Container from "./Container";
 import { FiSearch, FiHeart, FiShoppingCart, FiUser } from "react-icons/fi";
 import logo from "/Images/logo.png";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
     <nav className="bg-white shadow py-3">
       <Container>
         <div className="flex items-center justify-between lg:gap-x-14 xl:gap-x-0 ">
-          <div className="flex items-center gap-4 ">
+          <NavLink to={`/`} className="flex items-center gap-4 ">
             <img src={logo} alt="Logo" />
-          </div>
+          </NavLink>
 
           <div className="flex-1 max-w-2xl hidden lg:block">
             <div className="relative">
